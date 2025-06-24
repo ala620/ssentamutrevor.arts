@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor's Art</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter antialiased bg-stone-50 text-stone-800 overflow-x-hidden">
+
+    <nav class="bg-white/80 backdrop-blur-md p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div id="brand-logo" class="text-stone-800 text-3xl font-bold tracking-wide cursor-pointer">
+                Trevor's 
+            </div>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><button id="nav-home" class="nav-link">Home</button></li>
+                <li><button id="nav-gallery" class="nav-link">Gallery</button></li>
+                <li><button id="nav-about" class="nav-link">About</button></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-stone-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><button id="mobile-nav-home" class="nav-link">Home</button></li>
+                <li><button id="mobile-nav-gallery" class="nav-link">Gallery</button></li>
+                <li><button id="mobile-nav-about" class="nav-link">About</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="app-root"></main>
+
+    <footer class="bg-stone-800 text-stone-300 py-8 text-center">
+        <div class="container mx-auto">
+            &copy; <span id="current-year"></span> Trevor's Art. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

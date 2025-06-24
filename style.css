@@ -1,0 +1,130 @@
+/* Custom CSS for theme, animations, and general styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafaf9; /* A very light, warm gray (stone-50) */
+    color: #292524; /* A dark brown/gray (stone-800) */
+}
+
+/* --- Navigation --- */
+.nav-link {
+    color: #57534e; /* text-stone-600 */
+    transition: color 0.3s ease-in-out;
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem;
+}
+.nav-link:hover {
+    color: #1c1917; /* text-stone-900 */
+}
+.nav-link.active {
+    color: #1c1917; /* text-stone-900 */
+    border-bottom: 2px solid #92400e; /* border-b-2 border-amber-800 */
+}
+
+
+/* --- Slideshow Styles --- */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeEffect 1.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+}
+
+/* Slideshow next/previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+
+
+/* Use this: */
+.order-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem; /* mt-6 */
+    background-color: #92400e; /* bg-amber-800 */
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.order-button:hover {
+    background-color: #78350f; /* bg-amber-900 */
+    transform: scale(1.05);
+}
+
+/* --- Animation Classes for Scroll Effects --- */
+/* This class is for elements that are initially hidden and will be animated on scroll */
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Define different animation states */
+.scroll-fade-in {
+    opacity: 0;
+}
+.scroll-slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+.scroll-slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+.scroll-slide-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* This class is added by JavaScript when the element is in view */
+.is-visible {
+    opacity: 1;
+    transform: none;
+}
