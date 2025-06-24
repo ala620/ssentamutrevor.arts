@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 3,
             title: "Wonder ",
-            image: "Female.png", // Use the correct filename
+            image: "Female.PNG", // Use the correct filename
             description: "A detailed study of light and shadow on classic drawing tools.",
             dimensions: "25 x 35 cm",
             price: "100 USD",
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 4,
             title: "Culture",
-            image: "Dreds.png", // Use the correct filename
+            image: "Dreds.PNG", // Use the correct filename
             description: "An intense and expressive charcoal portrait.",
             dimensions: "40 x 50 cm",
             price: "120 USD",
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
          {
             id: 5,
             title: "",
-            image: "Sample.png", // Use the correct filename
+            image: "Sample.PNG", // Use the correct filename
             description: "A sample piece showcasing hyperrealistic techniques.",
             dimensions: "30 x 30 cm",
             price: "120 USD",
